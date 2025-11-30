@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freelancer Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Freelancer Invoice Generator</h2>
+
+        <div class="section">
+            <label>Client Name</label>
+            <input id="clientName" type="text">
+
+            <label>Client Email</label>
+            <input id="clientEmail" type="text">
+
+            <label>Invoice Number</label>
+            <input id="invoiceNumber" type="text">
+
+            <label>Date</label>
+            <input id="invoiceDate" type="date">
+        </div>
+
+        <div class="section">
+            <h3>Items</h3>
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="itemsBody"></tbody>
+            </table>
+            <button onclick="addItem()">Add Item</button>
+        </div>
+
+        <div class="section">
+            <label>Tax (%)</label>
+            <input id="tax" type="number" value="0">
+        </div>
+
+        <button class="generate-btn" onclick="generatePDF()">Generate PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
